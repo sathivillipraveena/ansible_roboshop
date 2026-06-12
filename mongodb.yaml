@@ -14,8 +14,8 @@
 
     - name: start service
       ansible.builtin.service:
-        name: mongodb
-        state: present
+        name: mongod
+        state: started
         enabled: yes
     
     - name: replacing the address
@@ -26,6 +26,6 @@
     
     - name: restart service
       ansible.builtin.service:
-        name: mongodb
+        name: mongod
         state: restart
         
